@@ -1,0 +1,48 @@
+{
+  "name": "shoparize",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "env-cmd -f ./test.env jest --verbose --runInBand --detectOpenHandles --no-cache --forceExit"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.4",
+    "csvtojson": "^2.0.10",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "mongoose": "^5.3.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "jest": "^26.0.1",
+    "supertest": "^4.0.2",
+    "@shelf/jest-mongodb": "^1.1.5",
+    "env-cmd": "^10.1.0"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "preset": "@shelf/jest-mongodb",
+    "testTimeout": 10000,
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/history/"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+To make docker work, add products.csv file here then edit app.js mongodb config as DB_URL_DOCKER from environment file.
